@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="rdt"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rdt">
+				<Option output="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/rdt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 rdt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rdt/fast">
+				<Option output="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/rdt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 rdt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/input.txt">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/output.txt">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/CMakeCache.txt">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/CMakeLists.txt">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/Makefile">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/bin/stop_wait">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/cmake_install.cmake">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include/Base.h">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include/DataStructure.h">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include/Global.h">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include/NetworkService.h">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include/RandomEventEnum.h">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include/RdtReceiver.h">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include/RdtSender.h">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include/StopWaitRdtReceiver.h">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include/StopWaitRdtSender.h">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include/Tool.h">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/lib/libnetsim.a">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/StopWait.cpp">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/StopWaitRdtReceiver.cpp">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/StopWaitRdtSender.cpp">
+			<Option target="rdt"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

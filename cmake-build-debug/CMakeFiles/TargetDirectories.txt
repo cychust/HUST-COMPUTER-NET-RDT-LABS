@@ -1,0 +1,3 @@
+/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/cmake-build-debug/CMakeFiles/rdt.dir

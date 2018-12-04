@@ -1,0 +1,4 @@
+/home/cyc/usr/opt/clion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE= -G "CodeBlocks - Unix Makefiles" /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait

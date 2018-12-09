@@ -16,6 +16,14 @@ SRReceiver::SRReceiver() : expectSequenceNumberRcvd(0) {
         lastAckPkt.payload[i] = '.';
     }
     lastAckPkt.checksum = pUtils->calculateCheckSum(lastAckPkt);
+
+    baseAck = 0;
+
+    for (int j = 0; j < 3; ++j) {
+        ack[j] = 0;
+//        messages[j] = NULL;
+    }
+
 }
 
 
@@ -27,22 +35,64 @@ void SRReceiver::receive(Packet &packet) {
     int checkSum = pUtils->calculateCheckSum(packet);
 
     //如果校验和正确，同时收到报文的序号等于接收方期待收到的报文序号一致
-    if (checkSum == packet.checksum && this->expectSequenceNumberRcvd % 8 == packet.seqnum) {
+    if (checkSum == packet.checksum) {
         pUtils->printPacket("接收方正确收到发送方的报文", packet);
+
 
         //取出Message，向上递交给应用层
         Message msg;
         memcpy(msg.data, packet.payload, sizeof(packet.payload));
-        pns->delivertoAppLayer(RECEIVER, msg);
-
         lastAckPkt.acknum = packet.seqnum; //确认序号等于收到的报文序号
         lastAckPkt.checksum = pUtils->calculateCheckSum(lastAckPkt);
         pUtils->printPacket("接收方发送确认报文", lastAckPkt);
         pns->sendToNetworkLayer(SENDER, lastAckPkt);    //调用模拟网络环境的sendToNetworkLayer，通过网络层发送确认报文到对方
 
-        this->expectSequenceNumberRcvd++; //接收序号递增
 
 
+        int k = 0;
+        for (k = 0; k < 3; ++k) {
+            if ((baseAck + k) % 8 == packet.seqnum)
+                break;
+        }
+        if (k == 3) {
+            return;
+        }
+
+//        //取出Message，向上递交给应用层
+//        Message msg;
+//        memcpy(msg.data, packet.payload, sizeof(packet.payload));
+//        lastAckPkt.acknum = packet.seqnum; //确认序号等于收到的报文序号
+//        lastAckPkt.checksum = pUtils->calculateCheckSum(lastAckPkt);
+//        pUtils->printPacket("接收方发送确认报文", lastAckPkt);
+//        pns->sendToNetworkLayer(SENDER, lastAckPkt);    //调用模拟网络环境的sendToNetworkLayer，通过网络层发送确认报文到对方
+
+//        int j;
+//        j = packet.seqnum - baseAck % 8;
+        messages[k] = msg;
+        ack[k] = 1;
+        int i;
+        for (i = 0; i < 3; ++i) {
+            if (ack[i] == 1) {
+                pns->delivertoAppLayer(RECEIVER, messages[i]);
+                ack[i] = 0;
+//                pns->delivertoAppLayer(RECEIVER, msg);
+            } else {
+                break;
+            }
+        }
+        if (i == 0)return;
+        for (int j = i; j < 3; ++j) {
+            ack[j - i] = ack[j];
+            ack[j] = 0;
+            messages[j - i] = messages[j];
+        }
+//        if (i == 3) {
+//            for (int j = 0; j < 3; ++j) {
+//                ack[j] = 0;
+//            }
+//        }
+        baseAck += (i);
+//        this->expectSequenceNumberRcvd++; //接收序号递增
 
     } else {
         if (checkSum != packet.checksum) {
@@ -50,8 +100,8 @@ void SRReceiver::receive(Packet &packet) {
         } else {
             pUtils->printPacket("接收方没有正确收到发送方的报文,报文序号不对", packet);
         }
-        pUtils->printPacket("接收方重新发送上次的确认报文", lastAckPkt);
-        pns->sendToNetworkLayer(SENDER, lastAckPkt);    //调用模拟网络环境的sendToNetworkLayer，通过网络层发送上次的确认报文
+//        pUtils->printPacket("接收方重新发送上次的确认报文", lastAckPkt);
+//        pns->sendToNetworkLayer(SENDER, lastAckPkt);    //调用模拟网络环境的sendToNetworkLayer，通过网络层发送上次的确认报文
 
     }
 }

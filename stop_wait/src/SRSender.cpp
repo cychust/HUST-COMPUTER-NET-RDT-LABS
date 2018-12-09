@@ -8,6 +8,9 @@ SRSender::SRSender() : expectSequenceNumberSend(0), waitingState(false) {
     base = 0;
     expectSequenceNumberSend = 0;
     windowSize = N;
+    for (int i = 0; i < windowSize; ++i) {
+        ack[i] = 0;
+    }
 }
 
 
@@ -16,7 +19,7 @@ SRSender::~SRSender() {
 
 
 bool SRSender::getWaitingState() {
-    if (expectSequenceNumberSend <= base + windowSize) {
+    if (expectSequenceNumberSend < base + windowSize) {
         waitingState = false;
     } else {
         waitingState = true;
@@ -37,31 +40,20 @@ bool SRSender::send(Message &message) {
     pUtils->printPacket("发送方发送报文", this->packetAck);
     pns->sendToNetworkLayer(RECEIVER, this->packetAck);
 
-    if (base == expectSequenceNumberSend) {
-        pns->startTimer(SENDER, Configuration::TIME_OUT, this->packetAck.seqnum);
-        this->packetWaitingAck.acknum = 0;
-        this->packetWaitingAck.seqnum = this->expectSequenceNumberSend % 8;
-        memcpy(this->packetWaitingAck.payload, message.data, sizeof(message.data));
-        this->packetWaitingAck.checksum = pUtils->calculateCheckSum(this->packetAck);
-    }
+//    if (base == expectSequenceNumberSend) {
+//        pns->startTimer(SENDER, Configuration::TIME_OUT, this->packetAck.seqnum);
+//        this->packetWaitingAck.acknum = 0;
+//        this->packetWaitingAck.seqnum = this->expectSequenceNumberSend % 8;
+//        memcpy(this->packetWaitingAck.payload, message.data, sizeof(message.data));
+//        this->packetWaitingAck.checksum = pUtils->calculateCheckSum(this->packetAck);
+//    }
+
+    pns->startTimer(SENDER, Configuration::TIME_OUT, this->packetAck.seqnum);
 
     this->packets.push_back(this->packetAck); //备份便于重传
     expectSequenceNumberSend++;
-//    this->waitingState = false;
-
     return true;
 
-//
-//    this->packetWaitingAck.acknum = -1; //忽略该字段
-//    this->packetWaitingAck.seqnum = this->expectSequenceNumberSend;
-//    this->packetWaitingAck.checksum = 0;
-//    memcpy(this->packetWaitingAck.payload, message.data, sizeof(message.data));
-//    this->packetWaitingAck.checksum = pUtils->calculateCheckSum(this->packetWaitingAck);
-//    pUtils->printPacket("发送方发送报文", this->packetWaitingAck);
-//    pns->startTimer(SENDER, Configuration::TIME_OUT, this->packetWaitingAck.seqnum);            //启动发送方定时器
-//    pns->sendToNetworkLayer(RECEIVER,
-//                            this->packetWaitingAck);                                //调用模拟网络环境的sendToNetworkLayer，通过网络层发送到对方
-//     /   this->waitingState = true;                                                                                    //进入等待状态
 }
 
 
@@ -99,6 +91,8 @@ void SRSender::receive(Packet &ackPkt) {
             if (ackPkt.acknum != this->packets.front().seqnum)
                 return;
         }
+        pns->stopTimer(SENDER, ackPkt.acknum);
+
         int i = 0;
         if (ackPkt.acknum <= this->packets.back().seqnum) {
             i = this->packets.size() - (this->packets.back().seqnum - ackPkt.acknum);
@@ -108,22 +102,38 @@ void SRSender::receive(Packet &ackPkt) {
             std::cout << "i= " << i << std::endl;
             std::cout << "i= " << packets.front().seqnum << "  " << ackPkt.acknum << std::endl;
         }
-        this->base += i;
-        std::cout << i << std::endl;
-        std::cout << packets.size() << std::endl;
-        while (i--) {
+
+        pUtils->printPacket("发送方正确收到确认", ackPkt);
+        ack[i - 1] = 1;
+        int j;
+        for (j = 0; j < windowSize; ++j) {
+            if (ack[j] == 0) {
+                break;
+            } else {
+                ack[j] = 0;
+            }
+        }
+        if (j==0)
+            return;
+
+        this->base += (j);
+
+        for (int k = j; k < windowSize; ++k) {
+            ack[k - j] = ack[k];
+            ack[k] = 0;
+        }
+
+//        std::cout << i << std::endl;
+//        std::cout << packets.size() << std::endl;
+        while (j--) {
             this->packets.pop_front();
         }
-        pUtils->printPacket("发送方正确收到确认", ackPkt);
-//        this->waitingState = false;                   //窗口此时没满
-        if (base != expectSequenceNumberSend) {
-//            this->waitingState = true;
-            pns->stopTimer(SENDER, (this->base - 1) % 8);
-            pns->startTimer(SENDER, Configuration::TIME_OUT, ((this->base) % 8));      //重新开启定时器
-        } else {
-            pns->stopTimer(SENDER, (this->base - 1) % 8);
-//            this->waitingState = false;
-        }
+//        if (base != expectSequenceNumberSend) {
+//            pns->stopTimer(SENDER, (this->base - 1) % 8);
+//            pns->startTimer(SENDER, Configuration::TIME_OUT, ((this->base) % 8));      //重新开启定时器
+//        } else {
+//            pns->stopTimer(SENDER, (this->base - 1) % 8);
+//        }
 
     }
 
@@ -134,17 +144,13 @@ void SRSender::timeoutHandler(int seqNum) {
     //唯一一个定时器,无需考虑seqNum
 //    pUtils->printPacket("发送方定时器时间到，重发上次发送的报文", this->packetWaitingAck);
     pns->stopTimer(SENDER, seqNum);                                        //首先关闭定时器
-    int j = 0;
     for (auto i = this->packets.begin(); i != this->packets.end(); ++i) {    //超时重传全部
-        pUtils->printPacket("发送方重新发送报文", *i);
-        pns->sendToNetworkLayer(RECEIVER, *i);
-        if (i == this->packets.begin()) {
+        if ((*i).seqnum == seqNum) {
+            pUtils->printPacket("发送方重新发送报文", *i);
+            pns->sendToNetworkLayer(RECEIVER, *i);
             pns->startTimer(SENDER, Configuration::TIME_OUT, ((*i).seqnum));
+            return;
         }
     }
-//    pns->startTimer(SENDER, Configuration::TIME_OUT, this->base);            //重新启动发送方定时器
-//    pns->sendToNetworkLayer(RECEIVER, this->packetWaitingAck);            //重新发送数据包
-
-
-
+    std::cout << "???????????????????????????????????? ERROR" << std::endl;
 }

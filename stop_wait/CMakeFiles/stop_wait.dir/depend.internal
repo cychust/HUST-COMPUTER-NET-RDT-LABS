@@ -34,6 +34,7 @@ CMakeFiles/stop_wait.dir/src/StopWait.cpp.o
  /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include/StopWaitRdtReceiver.h
  /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include/StopWaitRdtSender.h
  /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include/Tool.h
+ /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/SRReceiver.h
  /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/SRSender.h
  /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/StopWait.cpp
 CMakeFiles/stop_wait.dir/src/StopWaitRdtReceiver.cpp.o

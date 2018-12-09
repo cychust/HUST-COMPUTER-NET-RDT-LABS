@@ -8,10 +8,13 @@
 #include "../include/StopWaitRdtReceiver.h"
 #include "SRSender.h"
 
+#include "SRReceiver.h"
+
 int main(int argc, char *argv[]) {
-	RdtSender *ps = new StopWaitRdtSender();
-//    SRSender *ps = new SRSender();
-    RdtReceiver *pr = new StopWaitRdtReceiver();
+//	RdtSender *ps = new StopWaitRdtSender();
+    SRSender *ps = new SRSender();
+//    RdtReceiver *pr = new StopWaitRdtReceiver();
+    SRReceiver *pr = new SRReceiver();
     pns->init();
     pns->setRtdSender(ps);
     pns->setRtdReceiver(pr);

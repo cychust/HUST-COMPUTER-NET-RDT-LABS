@@ -95,6 +95,8 @@ list
 /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/include/StopWaitRdtReceiver.h
 SRSender.h
 /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/SRSender.h
+SRReceiver.h
+/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/SRReceiver.h
 
 /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/StopWaitRdtReceiver.cpp
 ../include/Base.h

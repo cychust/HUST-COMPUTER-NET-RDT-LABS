@@ -20,6 +20,9 @@ private:
 
     Packet packetAck;
 
+//    list<Packet> hasAckPackets;
+
+    int ack[3];
     list<Packet> packets;
 
     int base;

@@ -36,6 +36,8 @@ CMakeFiles/stop_wait.dir/src/StopWait.cpp.o: include/Tool.h
 CMakeFiles/stop_wait.dir/src/StopWait.cpp.o: src/SRReceiver.h
 CMakeFiles/stop_wait.dir/src/StopWait.cpp.o: src/SRSender.h
 CMakeFiles/stop_wait.dir/src/StopWait.cpp.o: src/StopWait.cpp
+CMakeFiles/stop_wait.dir/src/StopWait.cpp.o: src/TCPReceiver.h
+CMakeFiles/stop_wait.dir/src/StopWait.cpp.o: src/TCPSender.h
 
 CMakeFiles/stop_wait.dir/src/StopWaitRdtReceiver.cpp.o: include/Base.h
 CMakeFiles/stop_wait.dir/src/StopWaitRdtReceiver.cpp.o: include/DataStructure.h
@@ -58,4 +60,26 @@ CMakeFiles/stop_wait.dir/src/StopWaitRdtSender.cpp.o: include/RdtSender.h
 CMakeFiles/stop_wait.dir/src/StopWaitRdtSender.cpp.o: include/StopWaitRdtSender.h
 CMakeFiles/stop_wait.dir/src/StopWaitRdtSender.cpp.o: include/Tool.h
 CMakeFiles/stop_wait.dir/src/StopWaitRdtSender.cpp.o: src/StopWaitRdtSender.cpp
+
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o: include/Base.h
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o: include/DataStructure.h
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o: include/Global.h
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o: include/NetworkService.h
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o: include/RandomEventEnum.h
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o: include/RdtReceiver.h
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o: include/RdtSender.h
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o: include/Tool.h
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o: src/TCPReceiver.cpp
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o: src/TCPReceiver.h
+
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o: include/Base.h
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o: include/DataStructure.h
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o: include/Global.h
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o: include/NetworkService.h
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o: include/RandomEventEnum.h
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o: include/RdtReceiver.h
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o: include/RdtSender.h
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o: include/Tool.h
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o: src/TCPSender.cpp
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o: src/TCPSender.h
 

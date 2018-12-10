@@ -9,6 +9,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/StopWait.cpp" "/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/CMakeFiles/stop_wait.dir/src/StopWait.cpp.o"
   "/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/StopWaitRdtReceiver.cpp" "/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/CMakeFiles/stop_wait.dir/src/StopWaitRdtReceiver.cpp.o"
   "/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/StopWaitRdtSender.cpp" "/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/CMakeFiles/stop_wait.dir/src/StopWaitRdtSender.cpp.o"
+  "/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/TCPReceiver.cpp" "/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o"
+  "/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/TCPSender.cpp" "/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

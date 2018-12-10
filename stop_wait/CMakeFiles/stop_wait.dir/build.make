@@ -177,13 +177,63 @@ CMakeFiles/stop_wait.dir/src/StopWaitRdtSender.cpp.o.provides: CMakeFiles/stop_w
 CMakeFiles/stop_wait.dir/src/StopWaitRdtSender.cpp.o.provides.build: CMakeFiles/stop_wait.dir/src/StopWaitRdtSender.cpp.o
 
 
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o: CMakeFiles/stop_wait.dir/flags.make
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o: src/TCPReceiver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o -c /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/TCPReceiver.cpp
+
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/TCPReceiver.cpp > CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.i
+
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/TCPReceiver.cpp -o CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.s
+
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o.requires:
+
+.PHONY : CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o.requires
+
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o.provides: CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o.requires
+	$(MAKE) -f CMakeFiles/stop_wait.dir/build.make CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o.provides.build
+.PHONY : CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o.provides
+
+CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o.provides.build: CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o
+
+
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o: CMakeFiles/stop_wait.dir/flags.make
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o: src/TCPSender.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o -c /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/TCPSender.cpp
+
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stop_wait.dir/src/TCPSender.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/TCPSender.cpp > CMakeFiles/stop_wait.dir/src/TCPSender.cpp.i
+
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stop_wait.dir/src/TCPSender.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/TCPSender.cpp -o CMakeFiles/stop_wait.dir/src/TCPSender.cpp.s
+
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o.requires:
+
+.PHONY : CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o.requires
+
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o.provides: CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o.requires
+	$(MAKE) -f CMakeFiles/stop_wait.dir/build.make CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o.provides.build
+.PHONY : CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o.provides
+
+CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o.provides.build: CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o
+
+
 # Object files for target stop_wait
 stop_wait_OBJECTS = \
 "CMakeFiles/stop_wait.dir/src/SRReceiver.cpp.o" \
 "CMakeFiles/stop_wait.dir/src/SRSender.cpp.o" \
 "CMakeFiles/stop_wait.dir/src/StopWait.cpp.o" \
 "CMakeFiles/stop_wait.dir/src/StopWaitRdtReceiver.cpp.o" \
-"CMakeFiles/stop_wait.dir/src/StopWaitRdtSender.cpp.o"
+"CMakeFiles/stop_wait.dir/src/StopWaitRdtSender.cpp.o" \
+"CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o" \
+"CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o"
 
 # External object files for target stop_wait
 stop_wait_EXTERNAL_OBJECTS =
@@ -193,10 +243,12 @@ bin/stop_wait: CMakeFiles/stop_wait.dir/src/SRSender.cpp.o
 bin/stop_wait: CMakeFiles/stop_wait.dir/src/StopWait.cpp.o
 bin/stop_wait: CMakeFiles/stop_wait.dir/src/StopWaitRdtReceiver.cpp.o
 bin/stop_wait: CMakeFiles/stop_wait.dir/src/StopWaitRdtSender.cpp.o
+bin/stop_wait: CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o
+bin/stop_wait: CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o
 bin/stop_wait: CMakeFiles/stop_wait.dir/build.make
 bin/stop_wait: lib/libnetsim.a
 bin/stop_wait: CMakeFiles/stop_wait.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable bin/stop_wait"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable bin/stop_wait"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stop_wait.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -209,6 +261,8 @@ CMakeFiles/stop_wait.dir/requires: CMakeFiles/stop_wait.dir/src/SRSender.cpp.o.r
 CMakeFiles/stop_wait.dir/requires: CMakeFiles/stop_wait.dir/src/StopWait.cpp.o.requires
 CMakeFiles/stop_wait.dir/requires: CMakeFiles/stop_wait.dir/src/StopWaitRdtReceiver.cpp.o.requires
 CMakeFiles/stop_wait.dir/requires: CMakeFiles/stop_wait.dir/src/StopWaitRdtSender.cpp.o.requires
+CMakeFiles/stop_wait.dir/requires: CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o.requires
+CMakeFiles/stop_wait.dir/requires: CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o.requires
 
 .PHONY : CMakeFiles/stop_wait.dir/requires
 

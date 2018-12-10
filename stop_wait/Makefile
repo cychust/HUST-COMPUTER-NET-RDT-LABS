@@ -258,6 +258,60 @@ src/StopWaitRdtSender.cpp.s:
 	$(MAKE) -f CMakeFiles/stop_wait.dir/build.make CMakeFiles/stop_wait.dir/src/StopWaitRdtSender.cpp.s
 .PHONY : src/StopWaitRdtSender.cpp.s
 
+src/TCPReceiver.o: src/TCPReceiver.cpp.o
+
+.PHONY : src/TCPReceiver.o
+
+# target to build an object file
+src/TCPReceiver.cpp.o:
+	$(MAKE) -f CMakeFiles/stop_wait.dir/build.make CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.o
+.PHONY : src/TCPReceiver.cpp.o
+
+src/TCPReceiver.i: src/TCPReceiver.cpp.i
+
+.PHONY : src/TCPReceiver.i
+
+# target to preprocess a source file
+src/TCPReceiver.cpp.i:
+	$(MAKE) -f CMakeFiles/stop_wait.dir/build.make CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.i
+.PHONY : src/TCPReceiver.cpp.i
+
+src/TCPReceiver.s: src/TCPReceiver.cpp.s
+
+.PHONY : src/TCPReceiver.s
+
+# target to generate assembly for a file
+src/TCPReceiver.cpp.s:
+	$(MAKE) -f CMakeFiles/stop_wait.dir/build.make CMakeFiles/stop_wait.dir/src/TCPReceiver.cpp.s
+.PHONY : src/TCPReceiver.cpp.s
+
+src/TCPSender.o: src/TCPSender.cpp.o
+
+.PHONY : src/TCPSender.o
+
+# target to build an object file
+src/TCPSender.cpp.o:
+	$(MAKE) -f CMakeFiles/stop_wait.dir/build.make CMakeFiles/stop_wait.dir/src/TCPSender.cpp.o
+.PHONY : src/TCPSender.cpp.o
+
+src/TCPSender.i: src/TCPSender.cpp.i
+
+.PHONY : src/TCPSender.i
+
+# target to preprocess a source file
+src/TCPSender.cpp.i:
+	$(MAKE) -f CMakeFiles/stop_wait.dir/build.make CMakeFiles/stop_wait.dir/src/TCPSender.cpp.i
+.PHONY : src/TCPSender.cpp.i
+
+src/TCPSender.s: src/TCPSender.cpp.s
+
+.PHONY : src/TCPSender.s
+
+# target to generate assembly for a file
+src/TCPSender.cpp.s:
+	$(MAKE) -f CMakeFiles/stop_wait.dir/build.make CMakeFiles/stop_wait.dir/src/TCPSender.cpp.s
+.PHONY : src/TCPSender.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,6 +336,12 @@ help:
 	@echo "... src/StopWaitRdtSender.o"
 	@echo "... src/StopWaitRdtSender.i"
 	@echo "... src/StopWaitRdtSender.s"
+	@echo "... src/TCPReceiver.o"
+	@echo "... src/TCPReceiver.i"
+	@echo "... src/TCPReceiver.s"
+	@echo "... src/TCPSender.o"
+	@echo "... src/TCPSender.i"
+	@echo "... src/TCPSender.s"
 .PHONY : help
 
 

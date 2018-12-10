@@ -107,6 +107,18 @@
 		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/StopWaitRdtSender.cpp">
 			<Option target="stop_wait"/>
 		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/TCPReceiver.cpp">
+			<Option target="stop_wait"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/TCPReceiver.h">
+			<Option target="stop_wait"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/TCPSender.cpp">
+			<Option target="stop_wait"/>
+		</Unit>
+		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/src/TCPSender.h">
+			<Option target="stop_wait"/>
+		</Unit>
 		<Unit filename="/home/cyc/usr/projects/Clion/computer_net/rdt_linux_student/rdt/stop_wait/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
